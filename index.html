@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
             color: #fff;
             display: flex;
             justify-content: center;
-            align-content: center;
+            align-items: center;
             min-height: 100vh;
             padding: 20px;
         }
@@ -26,17 +26,17 @@
             background: rgba(255, 255, 255, 0.03);
             border: 1px solid rgba(157, 78, 221, 0.2);
             border-radius: 24px;
-            padding: 40px 30px;
+            padding: 35px 25px;
             text-align: center;
             box-shadow: 0 20px 50px rgba(0,0,0,0.5);
             backdrop-filter: blur(10px);
             margin: auto;
         }
         .badge {
-            background: linear-gradient(90deg, #9d4ededf, #7b2cbf);
+            background: linear-gradient(90deg, #9d4ede, #7b2cbf);
             padding: 6px 16px;
             border-radius: 50px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 1px;
             display: inline-block;
@@ -53,15 +53,58 @@
         }
         p.subtitle {
             color: #b39ddb;
-            font-size: 1.1rem;
-            margin-bottom: 30px;
+            font-size: 1rem;
+            margin-bottom: 25px;
         }
+        
+        .demo-box {
+            background: rgba(0, 245, 212, 0.05);
+            border: 1px dashed #00f5d4;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: left;
+            position: relative;
+        }
+        .demo-title {
+            color: #00f5d4;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .demo-text {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            color: #e0aaff;
+            font-family: monospace;
+            margin-bottom: 12px;
+            border: 1px solid rgba(255,255,255,0.05);
+            user-select: all;
+        }
+        .btn-copy {
+            background: #00f5d4;
+            color: #000;
+            border: none;
+            padding: 8px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .btn-copy:hover { background: #00bbf9; }
+
         .features {
             text-align: left;
             background: rgba(0, 0, 0, 0.2);
             padding: 20px;
             border-radius: 16px;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
             border-left: 4px solid #9d4ede;
         }
         .feature-item {
@@ -71,25 +114,26 @@
             font-size: 0.95rem;
         }
         .feature-item:last-child { margin-bottom: 0; }
-        .icon { margin-right: 12px; font-size: 1.2rem; }
+        .icon { margin-right: 12px; font-size: 1.1rem; }
         
+        .price-box {
+            margin-bottom: 25px;
+        }
         .price-tag {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: bold;
-            margin-bottom: 5px;
             color: #fff;
         }
         .old-price {
             text-decoration: line-through;
             color: #ff6b6b;
             font-size: 1.2rem;
-            margin-bottom: 25px;
         }
         
-        .btn {
+        .btn-buy {
             display: block;
-            background: linear-gradient(90deg, #00f5d4, #00bbf9);
-            color: #000;
+            background: linear-gradient(90deg, #ff007f, #7b2cbf);
+            color: #fff;
             text-decoration: none;
             padding: 18px 30px;
             border-radius: 14px;
@@ -98,14 +142,14 @@
             text-transform: uppercase;
             letter-spacing: 0.5px;
             transition: all 0.3s ease;
-            box-shadow: 0 0 20px rgba(0, 245, 212, 0.4);
+            box-shadow: 0 0 20px rgba(255, 0, 127, 0.3);
         }
-        .btn:hover {
+        .btn-buy:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 245, 212, 0.6);
+            box-shadow: 0 10px 25px rgba(255, 0, 127, 0.5);
         }
         .footer-text {
-            margin-top: 25px;
+            margin-top: 20px;
             font-size: 0.8rem;
             color: #6a4c93;
         }
@@ -114,25 +158,45 @@
 <body>
 
 <div class="container">
-    <div class="badge">🔥 ТРЕНД 2026 ГОДА</div>
-    <h1>НЕЙРОСЕТЬ-ПАК v1.0</h1>
-    <p class="subtitle">Перестань тратить время. Заставь искусственный интеллект учиться, писать коды и работать за тебя!</p>
+    <div class="badge">🔥 НАДЕЖНЫЙ СОФТ ДЛЯ УЧЕБЫ И РАБОТЫ</div>
+    <h1>AI MEGA PACK 2026</h1>
+    <p class="subtitle">Заставь искусственный интеллект делать за тебя 99% всей рутины.</p>
     
-    <div class="features">
-        <div class="feature-item"><span class="icon">🚀</span> 300+ готовых промтов для ChatGPT и Midjourney</div>
-        <div class="feature-item"><span class="icon">🎓</span> Секретные команды: рефераты и домашка за 1 минуту</div>
-        <div class="feature-item"><span class="icon">💰</span> Гайд по заработку на ИИ без опыта</div>
-        <div class="feature-item"><span class="icon">⚡</span> Доступ навсегда + бесплатные обновления</div>
+    <div class="demo-box">
+        <div class="demo-title">🎁 БЕСПЛАТНЫЙ ДЕМО-ПРОМТ (Для Учебы):</div>
+        <p style="font-size: 0.85rem; color: #b39ddb; margin-bottom: 10px;">Скопируй текст ниже и вставь в ChatGPT. Он перепишет любой текст так, что ни один сервис Антиплагиата не догадается:</p>
+        <div class="demo-text" id="promtText">«Перепиши этот текст, используя редкие синонимы и меняя структуру предложений, но полностью сохрани научный смысл. Текст должен выглядеть так, будто его написал живой студент-отличник, а не ИИ. Проверь, чтобы уникальность была выше 95%. Вот текст: [ВСТАВЬ СВОЙ ТЕКСТ]»</div>
+        <button class="btn-copy" onclick="copyPromt()">📋 Скопировать промт</button>
     </div>
     
-    <div class="price-tag">99 Рублей</div>
-    <div class="old-price">490 руб.</div>
+    <div class="features">
+        <p style="font-weight: bold; margin-bottom: 15px; color: #c77dff;">ЧТО ВНУТРИ ПОЛНОЙ ВЕРСИИ (100+ ПРОМТОВ):</p>
+        <div class="feature-item"><span class="icon">🎓</span> 20 секретных команд для идеальной учебы без усилий</div>
+        <div class="feature-item"><span class="icon">🎬</span> 20 промтов для вирусов в TikTok / Shorts (удержание 100%)</div>
+        <div class="feature-item"><span class="icon">💰</span> 20 готовых схем заработка на ИИ на фрилансе</div>
+        <div class="feature-item"><span class="icon">🎨</span> 20 готовых кодов для генерации шедевров в Midjourney</div>
+        <div class="feature-item"><span class="icon">💻</span> 20 скриптов для написания сайтов, ботов и кодов</div>
+    </div>
     
-    <!-- ТУТ ССЫЛКА НА ТВОЙ TELEGRAM ХЕНДЛ ИЛИ БОТА -->
-    <a href="https://t.me/Т@AI_PRO_PACK_2026_bot target="_blank" class="btn">🚀 ПОЛУЧИТЬ ПАК МГНОВЕННО</a>
+    <div class="price-box">
+        <div class="old-price">490 руб.</div>
+        <div class="price-tag">99 Рублей</div>
+    </div>
     
-    <p class="footer-text">После оплаты ссылка на скачивание папки прилетит автоматически.</p>
+    <!-- ТУТ ССЫЛКА НА ТВОЕГО БОТА -->
+    <a href="https://t.me/@AI_PRO_PACK_2026_bot" target="_blank" class="btn-buy">🤖 ПОЛУЧИТЬ ПОЛНЫЙ ПАК В TELEGRAM</a>
+    
+    <p class="footer-text">Доступ выдается навсегда. Все последующие обновления бесплатны.</p>
 </div>
+
+<script>
+    function copyPromt() {
+        const text = document.getElementById("promtText").innerText;
+        navigator.clipboard.writeText(text).then(() => {
+            alert("Промт скопирован! Вставь его в ChatGPT и протестируй 🚀");
+        });
+    }
+</script>
 
 </body>
 </html>
